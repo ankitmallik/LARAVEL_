@@ -38,7 +38,7 @@
                     <td>{{ $records->created_at }}</td>
                     <td>{{ $records->updated_at }}</td>
                     <td><a href="delete_record/{{$records->id}}" class="btn btn-danger">Delete</a></td>
-                    <td><a href="" class="btn btn-success">Update</a></td>
+                    <td><a href="edit_record/{{$records->id}}" class="btn btn-success">Edit</a></td>
                 </tr>
                 @endforeach
             </tbody>

@@ -32,4 +32,20 @@ class formController extends Controller
         students::destroy($id);
         return back();
     }
+
+    function edit_records($id)
+    {
+        $data = students::find($id);
+        return view('edit', compact('data'));
+    }
+    function update_records(Request $request, $id)
+    {
+        $data = students::find($id);
+        $data->name = $request->input('name');
+        $data->email = $request->input('email');
+        $data->password = $request->input('password');
+
+        $data->save();
+        return redirect('record');
+    }
 }

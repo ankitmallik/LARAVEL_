@@ -21,3 +21,9 @@ Route::get('record',[\App\Http\Controllers\formController::class,'records']);
 // delete data
 Route::get('delete_record/{id}',[\App\Http\Controllers\formController::class,'delete_records']);
 
+// edit data
+Route::get('edit_record/{id}',[\App\Http\Controllers\formController::class,'edit_records']);
+
+// update data
+Route::post('update_data/{id}',[\App\Http\Controllers\formController::class,'update_records']);
+
